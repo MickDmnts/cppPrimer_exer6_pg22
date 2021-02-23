@@ -23,13 +23,34 @@ void PrintSummedTransaction()
 	}
 }
 
+void PrintSameISBNs()
+{
+	std::cout << "CTRL+Z then Enter to terminate." << std::endl;
+
+	Sales_item currentItem, sum;
+
+	if (std::cin >> currentItem)
+	{
+		sum = currentItem;
+		while (std::cin >> currentItem)
+		{
+			sum += currentItem;
+		}
+		std::cout << sum << std::endl;
+	}
+	
+
+}
+
 int main()
 {
 	PrintTransaction(); //Task 1.20
 	system("pause");
 
-	PrintSummedTransaction();
+	PrintSummedTransaction(); //Task 1,21
 	system("pause");
+
+	PrintSameISBNs(); //Task 1.22
 
 	return 0;
 }
